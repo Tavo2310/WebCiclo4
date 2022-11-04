@@ -22,5 +22,6 @@
         "terminal.ansiYellow": "#F9EE98"
     },
     "editor.formatOnSave": false,
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Lucida Sans Typewriter, 'Courier New', monospace"
 }
