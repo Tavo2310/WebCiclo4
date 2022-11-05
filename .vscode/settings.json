@@ -41,7 +41,7 @@
     "editor.formatOnSave": false,
     "editor.fontSize": 14,
     "editor.fontFamily": "Lucida Sans Typewriter, 'Courier New', monospace",
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     "editor.colorDecorators": false,
     "editor.cursorSmoothCaretAnimation": true,
@@ -66,5 +66,6 @@
     "terminal.integrated.tabs.defaultColor": null,
     "terminal.integrated.tabs.enableAnimation": true,
     "terminal.integrated.tabs.enabled": true,
-    "peacock.color": "#61dafb"
+    "peacock.color": "#61dafb",
+    "editor.cursorBlinking": "smooth"
 }
