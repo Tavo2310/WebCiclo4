@@ -4,5 +4,7 @@ export class UsuarioModel{
     apellidos?: string;
     telefono?: string;
     correo?: string;
-    
+    token?: string;
+    isLoggedIn?: boolean = false;
+
 }
