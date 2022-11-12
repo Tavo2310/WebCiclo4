@@ -3,7 +3,7 @@ export class ServicioModel{
     origen?: String;
     destino?: string;
     fecha?: string;
-    hola?: string;
+    hora?: string;
     encomienda?: string;
     valor?: string;
    
