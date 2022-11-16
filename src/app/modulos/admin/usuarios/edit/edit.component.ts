@@ -10,6 +10,7 @@ import Swal from 'sweetalert2'
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
+
 export class EditComponent implements OnInit {
 
   constructor(
@@ -18,6 +19,7 @@ export class EditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) { }
+
   fgValidacion = this.fb.group({
     id: ['', [Validators.required]],
     nombre: ['', [Validators.required]],
@@ -25,6 +27,12 @@ export class EditComponent implements OnInit {
     telefono: ['', [Validators.required, Validators.minLength(6)]],
     correo: ['', [Validators.required, Validators.email]],
   });
+
+  ngOnInit(): void {
+    let id = this.route.snapshot.params["id"]
+    this.getWithId(id)
+  }
+
   getWithId(id: string){
     this.usuarioService.getWithId(id).subscribe((data: UsuarioModel) => {
       console.log(data)
@@ -35,6 +43,7 @@ export class EditComponent implements OnInit {
       this.fgValidacion.controls["telefono"].setValue(data.telefono as string)
     })
   }
+
   edit(){
     let usuario = new UsuarioModel();
     usuario.id = this.fgValidacion.controls["id"].value as string;
@@ -47,15 +56,10 @@ export class EditComponent implements OnInit {
       Swal.fire('Editado Correctamente!', '', 'success')
       this.router.navigate(['/admin/get']);
     },
+    
     (error: any) => {
       console.log(error)
       alert("Error en el envio");
     })
   }
-  ngOnInit(): void {
-    let id = this.route.snapshot.params["id"]
-    this.getWithId(id)
-  }
-
-
-}
+ }
