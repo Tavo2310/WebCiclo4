@@ -1,8 +1,10 @@
 <div class="container">
     <br>
+
     <a routerLink="/admin/create" class="btn">Registrar Persona</a>
    
     <table class="table responsive">
+      
       <thead>
         <tr>
             <th>Nombre</th>
@@ -11,6 +13,7 @@
             <th>Telefono</th>
             <th>Acciones</th>
         </tr>
+
       </thead>   
       <tbody>
         <tr *ngFor="let p of listado">
@@ -27,6 +30,7 @@
             <a button class="btn red" (click)="delete(p.id)">
             <i class="material-icons">delete</i> 
             </a>
+
           </td>
         </tr>
       </tbody>

@@ -18,6 +18,7 @@ export class CreateComponent implements OnInit {
     private usuarioService: UsuarioService,
     private router: Router
   ) { }
+  
 
   fgValidacion = this.fb.group({
     nombre: ['', [Validators.required]],
