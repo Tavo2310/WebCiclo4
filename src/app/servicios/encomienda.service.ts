@@ -7,7 +7,7 @@ import { SeguridadService } from './seguridad.service';
 @Injectable({
   providedIn: 'root'
 })
-export class EncomiendaeService {
+export class EncomiendaService {
 
   url = "http://localhost:3000"
   token: string = ''

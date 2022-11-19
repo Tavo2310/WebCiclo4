@@ -2,6 +2,7 @@
     <br>
 
     <a routerLink="/admin/create" class="btn">Registrar Persona</a>
+    
    
     <table class="table responsive">
       
@@ -22,9 +23,11 @@
           <td>{{p.correo}}</td>
           <td>{{p.telefono}}</td>
           <td>
+            
 
             <a routerLink="/admin/edit/{{p.id}}" class="btn">
-            <i class="material-icons">create</i>
+             <i class="material-icons">create</i>
+             
           </a>
 
             <a button class="btn red" (click)="delete(p.id)">
