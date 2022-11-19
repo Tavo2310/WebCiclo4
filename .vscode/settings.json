@@ -39,7 +39,7 @@
         "titleBar.inactiveForeground": "#e7e7e799"
     },
     "editor.formatOnSave": false,
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "editor.fontFamily": "Lucida Sans Typewriter, 'Courier New', monospace",
     "editor.cursorStyle": "line",
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,

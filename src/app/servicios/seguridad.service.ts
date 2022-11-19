@@ -14,7 +14,8 @@ export class SeguridadService {
   constructor(private http: HttpClient) { 
       this.verificarSesion();
     }
-  
+
+
   login(correo: string, clave: string): Observable<any> {
     //Hacemos la solicitud al servicio web de login pasandole usuario y clave
     return this.http.post<any>(`${this.url}/login`, {
@@ -26,6 +27,7 @@ export class SeguridadService {
       })
     });
   }
+
 
   almacenarSesion(data: any): Boolean {
     // Verificamos si existe la sesion
@@ -52,9 +54,11 @@ export class SeguridadService {
     }
   }
 
+
   refrescarDatosSession(data: any){
     this.sessionUserData.next(data)
   }
+
 
   eliminarSesion(){
     //Eliminamos los datos de la sesion
@@ -84,6 +88,7 @@ export class SeguridadService {
     return this.sessionUserData.asObservable();
   }
 
+  
   getToken(){
     let sessionData = localStorage.getItem("sessionData");
     if(sessionData){
