@@ -21,7 +21,7 @@ export class ClienteService {
 
     
 
-    //Crear un usuario
+    //Crear un cliente
     store(cliente: ClienteModel): Observable<ClienteModel> {
       return   this.http.post<ClienteModel>(`${this.url}/clientes`, {
         cedula: cliente.cedula,

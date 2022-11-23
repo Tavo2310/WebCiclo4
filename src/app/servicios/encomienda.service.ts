@@ -20,7 +20,6 @@ export class EncomiendaService {
     //Crear un usuario
     store(encomienda: EncomiendaModel): Observable<EncomiendaModel> {
       return this.http.post<EncomiendaModel>(`${this.url}/encomiendas`, {
-        id: encomienda.id,
         descripcion: encomienda.descripcion,
         peso: encomienda.peso,
         tipo: encomienda.tipo,
@@ -39,7 +38,6 @@ export class EncomiendaService {
     //Actualiza un usuario
     update(encomienda: EncomiendaModel): Observable<EncomiendaModel> {
       return this.http.patch<EncomiendaModel>(`${this.url}/encomiendas/${encomienda.id}`, {
-        id: encomienda.id,
         descripcion: encomienda.descripcion,
         peso: encomienda.peso,
         tipo: encomienda.tipo,
