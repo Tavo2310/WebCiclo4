@@ -10,9 +10,7 @@ import Swal from 'sweetalert2'
 })
 export class GetComponent implements OnInit {
 
-  constructor(
-    private clienteService: ClienteService
-  ) { }
+  constructor(private clienteService: ClienteService  ) { }
 
   listado: ClienteModel[] = []
 

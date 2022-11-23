@@ -11,17 +11,20 @@ import Swal from 'sweetalert2'
 export class GetComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
+  
   listado: UsuarioModel[] = []
 
   ngOnInit(): void {
     this.getAll()
   }
+
   getAll(){
     this.usuarioService.getAll().subscribe((data: UsuarioModel[]) => {
       this.listado = data
       console.log(data)
           })
   }
+  
   delete(id?: any){
     console.log(id)
     Swal.fire({

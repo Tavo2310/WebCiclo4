@@ -8,18 +8,22 @@ import { SeguridadService } from './seguridad.service';
   providedIn: 'root'
 })
 export class ClienteService {
-
+  
   url = "http://localhost:3000"
   token: string = ''
 
-  constructor(private http: HttpClient,
-    private seguridadService: SeguridadService) { 
-      this.token = this.seguridadService.getToken();
+  
+  constructor(private http: HttpClient,  
+    private seguridadService: SeguridadService)    { 
+    this.token = this.seguridadService.getToken();
+    
     }
+
+    
+
     //Crear un usuario
     store(cliente: ClienteModel): Observable<ClienteModel> {
-      return this.http.post<ClienteModel>(`${this.url}/clientes`, {
-        id: cliente.id,
+      return   this.http.post<ClienteModel>(`${this.url}/clientes`, {
         cedula: cliente.cedula,
         nombre: cliente.nombre,
         apellidos: cliente.apellidos,
@@ -29,6 +33,7 @@ export class ClienteService {
         direccion: cliente.direccion,
         telefono: cliente.telefono,
         correo: cliente.correo
+        
       });
     }
     //Obtiene todos los clientes
@@ -42,7 +47,6 @@ export class ClienteService {
     //Actualiza un usuario
     update(cliente: ClienteModel): Observable<ClienteModel> {
       return this.http.patch<ClienteModel>(`${this.url}/clientes/${cliente.id}`, {
-        id: cliente.id,
         cedula: cliente.cedula,
         nombre: cliente.nombre,
         apellidos: cliente.apellidos,
